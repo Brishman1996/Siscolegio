@@ -5,13 +5,15 @@ import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import Datos.Seccion;
 
-public class ClsCurso {
-   public int idcurso;
+public class ClsCurso extends Seccion{
+   //public int idcurso;
    public String nombrecurso;
    public int idprofesor;
    //Constructor
    public ClsCurso(){
+       super();
    }
    
    /**Lógica-Método para Registrar Persona*/

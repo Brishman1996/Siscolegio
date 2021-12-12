@@ -8,14 +8,15 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-public class ClsCurso {
-   public int idcurso;
+public class ClsCurso extends Seccion{
+   //public int idcurso;
    public String nombrecurso;
    public int idprofesor;
    
    
    /**Constructor*/
    public ClsCurso(){
+       super();
    }
   
 /**Datos - Metodo para registrar persona*/

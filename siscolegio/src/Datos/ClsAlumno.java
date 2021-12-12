@@ -9,21 +9,22 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-public class ClsAlumno {
+public class ClsAlumno extends Persona{
    public int idalumno;
-   public String apellidos;
-   public String nombres;
+   //public String apellidos;
+   //public String nombres;
    public Date fechaNacimiento;
    public String sexo;
-   public String direccion;
-   public String telefono;
-   public String email;
-   public String password;
+   //public String direccion;
+   //public String telefono;
+   //public String email;
+   //public String password;
    public String grado;
    public String seccion;
    
    /**Constructor*/
    public ClsAlumno(){
+       super();
    }
   
 /**Datos - Metodo para registrar persona*/

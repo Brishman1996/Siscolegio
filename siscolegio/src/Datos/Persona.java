@@ -17,5 +17,16 @@ public abstract class Persona {
     public String password;
     public String direccion;
     
-    Persona(){}
+    public Persona(){}
+
+    public Persona(String apellidos, String nombres, String telefono, String email, String password, String direccion) {
+        this.apellidos = apellidos;
+        this.nombres = nombres;
+        this.telefono = telefono;
+        this.email = email;
+        this.password = password;
+        this.direccion = direccion;
+    }
+    
+    
 }

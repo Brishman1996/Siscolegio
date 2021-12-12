@@ -8,9 +8,9 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-public class ClsNotas {
+public class ClsNotas extends Seccion{
    public int idnota;
-   public int idcurso;
+   //public int idcurso;
    public int idalumno;
    public String unidad;
    public int promedio;
@@ -18,6 +18,7 @@ public class ClsNotas {
    
    /**Constructor*/
    public ClsNotas(){
+       super();
    }
   
 /**Datos - Metodo para registrar persona*/

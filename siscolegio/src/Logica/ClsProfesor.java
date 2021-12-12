@@ -5,18 +5,20 @@ import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-
-public class ClsProfesor {
+import Datos.Persona;
+        
+public class ClsProfesor extends Persona{
    public int idprofesor;
-   public String apellidos;
-   public String nombres;
+   //public String apellidos;
+   //public String nombres;
    public String dni;
-   public String direccion;
-   public String telefono;
-   public String email;
-   public String password;
+   //public String direccion;
+   //public String telefono;
+   //public String email;
+   //public String password;
    //Constructor
    public ClsProfesor(){
+       super();
    }
    
    /**Lógica-Método para Registrar Persona*/
