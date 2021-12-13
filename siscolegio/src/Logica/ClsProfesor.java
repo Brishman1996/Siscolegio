@@ -5,9 +5,10 @@ import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-import Datos.Persona;
+import Heredar.Persona;
+import Heredar.ConsultasProfesor;
         
-public class ClsProfesor extends Persona{
+public class ClsProfesor extends Persona implements ConsultasProfesor{
    public int idprofesor;
    //public String apellidos;
    //public String nombres;
@@ -22,7 +23,8 @@ public class ClsProfesor extends Persona{
    }
    
    /**Lógica-Método para Registrar Persona*/
-public boolean RegistrarProfesor(){
+   @Override
+   public boolean RegistrarProfesor(){
      boolean respuesta=true;
      
     try {
@@ -44,7 +46,8 @@ public boolean RegistrarProfesor(){
     return respuesta;
 }
    /**Lógica-Método para Actualizar Persona*/
-public boolean ActualizarProfesor(){
+   @Override
+   public boolean ActualizarProfesor(){
      boolean respuesta=true;
      
     try {
@@ -67,7 +70,8 @@ public boolean ActualizarProfesor(){
     return respuesta;
 }
 
-public boolean EliminarProfesor(int idProfesor){
+   @Override
+   public boolean EliminarProfesor(int idProfesor){
      boolean respuesta=true;
      
     try {
@@ -82,6 +86,7 @@ public boolean EliminarProfesor(int idProfesor){
 
 
      /**Lógica- Listar Personas*/
+   @Override
        public TableModel ListarProfesor(){
         TableModel modelo = new DefaultTableModel();
 
@@ -97,6 +102,7 @@ public boolean EliminarProfesor(int idProfesor){
        
        
        
+   @Override
         public TableModel ListarProfesorvista(){
         TableModel modelo = new DefaultTableModel();
 

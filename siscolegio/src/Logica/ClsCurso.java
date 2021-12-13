@@ -1,11 +1,12 @@
 package Logica;
+import Heredar.Seccion;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-import Datos.Seccion;
+
 
 public class ClsCurso extends Seccion{
    //public int idcurso;

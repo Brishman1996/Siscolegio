@@ -1,5 +1,6 @@
 package Datos;
 
+import Heredar.Seccion;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -10,7 +11,6 @@ import javax.swing.table.TableModel;
 
 public class ClsNotas extends Seccion{
    public int idnota;
-   //public int idcurso;
    public int idalumno;
    public String unidad;
    public int promedio;

@@ -6,19 +6,14 @@ import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-import Datos.Persona;
+import Heredar.Persona;
+import Heredar.ConsultasAlumno;
 
-public class ClsAlumno extends Persona{
-
+public class ClsAlumno extends Persona implements ConsultasAlumno{
+    
     public int idalumno;
-    //public String apellidos;
-    //public String nombres;
     public String fechaNacimiento;
     public String sexo;
-    //public String direccion;
-    //public String telefono;
-    //public String email;
-    //public String password;
     public String grado;
     public String seccion;
     //Constructor
@@ -29,7 +24,9 @@ public class ClsAlumno extends Persona{
 
     /**
      * Lógica-Método para Registrar Persona
+     * @return 
      */
+    @Override
     public boolean RegistrarAlumno() {
         boolean respuesta = true;
 
@@ -57,7 +54,9 @@ public class ClsAlumno extends Persona{
 
     /**
      * Lógica-Método para Actualizar Persona
+     * @return 
      */
+    @Override
     public boolean ActualizarAlumno() {
         boolean respuesta = true;
 
@@ -83,6 +82,7 @@ public class ClsAlumno extends Persona{
         return respuesta;
     }
 
+    @Override
     public boolean EliminarAlumno(int idAlumno) {
         boolean respuesta = true;
 
@@ -114,7 +114,9 @@ public class ClsAlumno extends Persona{
 
     /**
      * Lógica- Listar Personas
+     * @return 
      */
+    @Override
     public TableModel ListarAlumnos() {
         TableModel modelo = new DefaultTableModel();
 
@@ -128,6 +130,7 @@ public class ClsAlumno extends Persona{
         return modelo;
     }
 
+    @Override
     public TableModel ListarAlumnosvista() {
         TableModel modelo = new DefaultTableModel();
 
@@ -144,6 +147,7 @@ public class ClsAlumno extends Persona{
     /**
      * Lógica- Busca Personas
      */
+    @Override
     public TableModel BusquedaAlumnos(String ApellidosNombres) {
         TableModel modelo = new DefaultTableModel();
 
@@ -157,6 +161,7 @@ public class ClsAlumno extends Persona{
         return modelo;
     }
 
+    @Override
     public TableModel BusquedaAlumnosgrado(String grado) {
         TableModel modelo = new DefaultTableModel();
 
@@ -170,6 +175,7 @@ public class ClsAlumno extends Persona{
         return modelo;
     }
 
+    @Override
     public TableModel BusquedaAlumnosseccion(String seccion) {
         TableModel modelo = new DefaultTableModel();
 
@@ -183,6 +189,7 @@ public class ClsAlumno extends Persona{
         return modelo;
     }
 
+    @Override
     public TableModel BusquedaAlumnosvista(String ApellidosNombres) {
         TableModel modelo = new DefaultTableModel();
 
@@ -196,6 +203,7 @@ public class ClsAlumno extends Persona{
         return modelo;
     }
 
+    @Override
     public ComboBoxModel ListarGrado() {
         ComboBoxModel modelo = new DefaultComboBoxModel();
 

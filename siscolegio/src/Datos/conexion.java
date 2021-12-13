@@ -5,7 +5,7 @@ public class conexion {
     
     //conexion con php myadmin
     private String driver="com.mysql.jdbc.Driver";
-    private String connectString="jdbc:mysql://127.0.0.1/siscolegio";
+    private String connectString="jdbc:mysql://127.0.0.1/sistemaedu";
     private String user="root";
     private String password="";
     public Connection con;

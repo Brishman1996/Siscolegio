@@ -1,5 +1,6 @@
 package Datos;
 
+import Heredar.Seccion;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;

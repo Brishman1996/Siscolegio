@@ -1,5 +1,6 @@
 package Datos;
 
+import Heredar.Persona;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -8,17 +9,12 @@ import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import Heredar.ConsultasAlumno;
 
-public class ClsAlumno extends Persona{
+public class ClsAlumno extends Persona implements ConsultasAlumno{
    public int idalumno;
-   //public String apellidos;
-   //public String nombres;
    public Date fechaNacimiento;
    public String sexo;
-   //public String direccion;
-   //public String telefono;
-   //public String email;
-   //public String password;
    public String grado;
    public String seccion;
    
@@ -28,7 +24,8 @@ public class ClsAlumno extends Persona{
    }
   
 /**Datos - Metodo para registrar persona*/
-public boolean RegistrarAlumno(){
+   @Override
+   public boolean RegistrarAlumno(){
      boolean respuesta=true;
     try {
           this.idalumno=GenerarIDAlumno();
@@ -42,7 +39,8 @@ public boolean RegistrarAlumno(){
 }
 
 /**Datos - Metodo para actualizar persona*/
-public boolean ActualizarAlumno(){
+   @Override
+   public boolean ActualizarAlumno(){
      boolean respuesta=true;
     try {
 
@@ -57,7 +55,8 @@ public boolean ActualizarAlumno(){
 }
 
 /**Datos - Metodo para Eliminar persona*/
-public boolean EliminarAlumno(int idAlumno){
+   @Override
+   public boolean EliminarAlumno(int idAlumno){
      boolean respuesta=true;
     try {
 
@@ -98,6 +97,7 @@ public boolean EliminarAlumno(int idAlumno){
    
    /**Datos-Metodo para Listar Personas*/
    //select * from persona where apellidos ||' ' || nombres like 'Diaz Perez Jo%'
+   @Override
    public TableModel ListarAlumnos(){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
@@ -133,6 +133,7 @@ public boolean EliminarAlumno(int idAlumno){
   }
    
    
+   @Override
    public TableModel ListarAlumnosvista(){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
@@ -173,6 +174,7 @@ public boolean EliminarAlumno(int idAlumno){
    
    
     /**Datos-Metodo para Buscar Personas*/
+   @Override
    public TableModel BusquedaAlumnos(String ApellidosNombres){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
@@ -212,6 +214,7 @@ public boolean EliminarAlumno(int idAlumno){
    
    
    
+   @Override
    public TableModel BusquedaAlumnosvista(String ApellidosNombres){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
@@ -248,6 +251,7 @@ public boolean EliminarAlumno(int idAlumno){
   }
    
    
+   @Override
    public TableModel BusquedaAlumnosgrado(String Grado){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
@@ -285,6 +289,7 @@ public boolean EliminarAlumno(int idAlumno){
    
    
    
+   @Override
    public TableModel BusquedaAlumnosseccion(String seccion){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
@@ -329,6 +334,7 @@ public boolean EliminarAlumno(int idAlumno){
  
 
     /**Datos-Metodo para Buscar Personas*/
+   @Override
    public ComboBoxModel ListarGrado(){
         //DefaultTableModel modelo = new DefaultTableModel();
         DefaultComboBoxModel modelo=new DefaultComboBoxModel();

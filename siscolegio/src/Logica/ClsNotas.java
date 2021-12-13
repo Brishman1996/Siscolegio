@@ -1,15 +1,15 @@
 package Logica;
+import Heredar.Seccion;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-import Datos.Seccion;
+
 
 public class ClsNotas extends Seccion{
    public int idnota;
-   //public int idcurso;
    public int idalumno;
    public String unidad;
    public int promedio;
@@ -87,7 +87,8 @@ public boolean EliminarNota(int idnota){
 /** Lógica-Convierte fecha de String a Date*/
    
 
-     /**Lógica- Listar Personas*/
+     /**Lógica- Listar Persona
+     * @return s*/
        public TableModel ListarNota(){
         TableModel modelo = new DefaultTableModel();
 

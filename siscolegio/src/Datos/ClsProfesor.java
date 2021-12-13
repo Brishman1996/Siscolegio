@@ -1,5 +1,6 @@
 package Datos;
 
+import Heredar.Persona;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -8,8 +9,9 @@ import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import Heredar.ConsultasProfesor;
 
-public class ClsProfesor extends Persona {
+public class ClsProfesor extends Persona implements ConsultasProfesor{
    public int idprofesor;
    //public String apellidos;
    //public String nombres;
@@ -24,7 +26,8 @@ public class ClsProfesor extends Persona {
        super();
    }
 /**Datos - Metodo para registrar persona*/
-public boolean RegistrarProfesor(){
+   @Override
+   public boolean RegistrarProfesor(){
      boolean respuesta=true;
     try {
           this.idprofesor=GenerarIDProfesor();
@@ -38,7 +41,8 @@ public boolean RegistrarProfesor(){
 }
 
 /**Datos - Metodo para actualizar persona*/
-public boolean ActualizarProfesor(){
+   @Override
+   public boolean ActualizarProfesor(){
      boolean respuesta=true;
     try {
 
@@ -53,7 +57,8 @@ public boolean ActualizarProfesor(){
 }
 
 /**Datos - Metodo para Eliminar persona*/
-public boolean EliminarProfesor(int idProfesor){
+   @Override
+   public boolean EliminarProfesor(int idProfesor){
      boolean respuesta=true;
     try {
 
@@ -94,6 +99,7 @@ public boolean EliminarProfesor(int idProfesor){
    
    /**Datos-Metodo para Listar Personas*/
    //select * from persona where apellidos ||' ' || nombres like 'Diaz Perez Jo%'
+   @Override
    public TableModel ListarProfesor(){
         DefaultTableModel modelo = new DefaultTableModel();
         try {
